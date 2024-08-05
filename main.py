@@ -21,19 +21,19 @@ while len(c)!=0:
             s.append(inp)
             c.pop(0)
             c.pop(0)
-        if c[1]=="out":
+        elif c[1]=="out":
             print(end=s[0])
             c.pop(0)
             c.pop(0)
             s.pop(0)
+        elif c[1]=="char":
+            s.append(chr(int(c[1])))
+            c.pop(0)
+            c.pop(0)
         else:
             s.append(c[1])
             c.pop(0)
             c.pop(0)
-    elif c[0]=="char":
-        s.append(chr(int(c[1])))
-        c.pop(0)
-        c.pop(0)
     else:
         print(f"CMD:{cmd} UNDEFINED COMMAND")
         break
