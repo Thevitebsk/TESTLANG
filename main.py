@@ -26,7 +26,8 @@ while len(c)!=0:
             c.pop(0)
             s.pop(0)
         elif c[1]=="char":
-            s.append(chr(int(c[1])))
+            s.append(chr(int(c[2])))
+            c.pop(0)
             c.pop(0)
             c.pop(0)
         else:
