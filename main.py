@@ -45,7 +45,7 @@ while len(c)!=0:
             c.pop(0)
     elif c[0]=="end":
         while len(o)>0:
-            print(o[0])
+            print(end=o[0])
             o.pop(0)
         break
     else:
