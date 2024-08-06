@@ -3,6 +3,7 @@ c=i.split()
 cmd=0
 s=[]
 inp=''
+o=[]
 while len(c)!=0:
     cmd+=1
     if c[0]=="out":
@@ -21,7 +22,7 @@ while len(c)!=0:
             c.pop(0)
             c.pop(0)
         elif c[1]=="out":
-            print(end=str(s[0]))
+            o.append(s[0])
             c.pop(0)
             c.pop(0)
             s.pop(0)
@@ -42,6 +43,11 @@ while len(c)!=0:
             s.pop(0)
             c.pop(0)
             c.pop(0)
+    elif c[0]=="end":
+        while len(o)>0:
+            print(o[0])
+            o.pop(0)
+        break
     else:
         print(f"CMD:{cmd} UNDEFINED COMMAND")
         break
