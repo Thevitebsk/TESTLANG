@@ -4,9 +4,6 @@ cmd=0
 s=[]
 inp=''
 o=[]
-if c[0]=="ID":
-    c.pop(0)
-    c.pop(0)
     while len(c)!=0:
         print(c)
         cmd+=1
@@ -55,6 +52,4 @@ if c[0]=="ID":
             break
         else:
             print(f"CMD:{cmd} UNDEFINED COMMAND")
-            break
-else:
-    print("ID REQIERD")
+            break
